@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
 import BookCover from "./bookCover";
+import { Button } from "./ui/button";
 
 const BookOverview = ({
   title,
@@ -11,7 +11,6 @@ const BookOverview = ({
   genra,
   rating,
   total_copies,
-  copies,
   available_copies,
   description,
   color,
@@ -49,6 +48,11 @@ const BookOverview = ({
         </div>
 
         <p className="book-description">{description}</p>
+
+        <Button className="book-overview_btn">
+          <Image src="/icons/book.svg" alt="book" width={20} height={20} />
+          <p className="font-bebas-neue text-xl text-dark-100">Borrow</p>
+        </Button>
       </div>
 
       <div className="relative flex flex-1 justify-center">
